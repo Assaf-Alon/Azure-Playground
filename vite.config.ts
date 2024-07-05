@@ -1,8 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+const BASE_URL = process.env.BASE_URL || "https://xp3.azurewebsites.net/"
+
 export default defineConfig({
-  base: "/",
+  base: BASE_URL,
   plugins: [react()],
   preview: {
     port: 3000,
